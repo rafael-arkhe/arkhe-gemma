@@ -1,0 +1,31 @@
+[package]
+name = "arkhe-gemma"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Integração verificável do modelo Gemma 4 com o Arkhe OS"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+blake3 = { workspace = true }
+hex = { workspace = true }
+tokio = { workspace = true }
+async-trait = { workspace = true }
+reqwest = { workspace = true }
+
+arkhe-ai-verify = { path = "../arkhe-ai-verify", version = "0.1.0" }
+arkhe-ai-core = { path = "../arkhe-ai-core", version = "0.1.0" }
+arkhe-ego = { path = "../arkhe-ego", version = "0.3.3" }
+arkhe-code-review = { path = "../arkhe-code-review", version = "0.1.2" }
+
+[dev-dependencies]
+tokio-test = { workspace = true }
+tempfile = { workspace = true }
+
+[lints]
+workspace = true

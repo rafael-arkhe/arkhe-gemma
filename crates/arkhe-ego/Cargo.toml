@@ -1,0 +1,4 @@
+[package]
+name = "arkhe-ego"
+version = "0.3.3"
+edition = "2021"
