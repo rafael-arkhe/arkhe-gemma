@@ -26,7 +26,7 @@ pub mod error;
 /// Módulo verify
 pub mod verify;
 
-pub use agent::{GemmaAgent, GemmaAction, AgentOutcome};
+pub use agent::{AgentOutcome, GemmaAction, GemmaAgent};
 pub use backend::{GemmaBackend, InferenceRequest, InferenceResponse};
 pub use config::{GemmaConfig, ModelSource};
 pub use error::GemmaError;

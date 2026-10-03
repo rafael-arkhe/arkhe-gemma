@@ -1,26 +1,18 @@
 [package]
-name = "arkhe-ai-verify"
+name = "arkhe-ai-routing"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "Verificação de artefatos de IA (safetensors, GGUF, ONNX)"
+description = "Roteamento de modelos com verificação de capabilities"
 
 [dependencies]
 serde.workspace = true
 serde_json.workspace = true
 thiserror.workspace = true
-tracing.workspace = true
 blake3.workspace = true
-hex.workspace = true
-sha2.workspace = true
-tokio.workspace = true
-
-[dev-dependencies]
-tempfile.workspace = true
-tokio-test.workspace = true
 
 [lints]
 workspace = true

@@ -1,4 +1,16 @@
 [package]
 name = "arkhe-code-review"
 version = "0.1.2"
-edition = "2021"
+description = "Arkhe Code Review facade"
+rust-version = "1.82"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+arkhe-code-review-core = { workspace = true }
+arkhe-code-review-agents = { workspace = true }
+arkhe-code-review-context = { workspace = true }
+arkhe-code-review-diff = { workspace = true }
+arkhe-code-review-judge = { workspace = true }
+arkhe-code-review-static = { workspace = true }
