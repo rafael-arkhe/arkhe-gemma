@@ -3,7 +3,9 @@ use std::sync::Arc;
 use serde::{Deserialize, Serialize};
 
 use arkhe_code_review::{Diff, ReviewConfig, ReviewOrchestrator};
-use arkhe_ego::{BehaviorSignature, Ego, IdentityDeclaration, MonitorConfig, NullLedger, SelfModel};
+use arkhe_ego::{
+    BehaviorSignature, Ego, IdentityDeclaration, MonitorConfig, NullLedger, SelfModel,
+};
 
 use crate::backend::{GemmaBackend, InferenceRequest};
 use crate::config::GemmaConfig;
@@ -15,24 +17,24 @@ pub enum GemmaAction {
     /// Ler um ficheiro.
     ReadFile {
         /// Caminho do ficheiro.
-        path: String
+        path: String,
     },
     /// Propor um patch.
     ProposePatch {
         /// Diff do patch.
         diff: String,
         /// Ficheiro alvo.
-        target_file: String
+        target_file: String,
     },
     /// Executar testes.
     RunTests {
         /// Comando a executar.
-        command: String
+        command: String,
     },
     /// Finalizar.
     Finish {
         /// Resumo da finalização.
-        summary: String
+        summary: String,
     },
 }
 
@@ -71,10 +73,7 @@ impl GemmaAgent {
     /// # Errors
     ///
     /// Devolve [`GemmaError::Agent`] se a configuração do `SelfModel` for inválida.
-    pub fn new(
-        config: GemmaConfig,
-        backend: Arc<dyn GemmaBackend>,
-    ) -> Result<Self, GemmaError> {
+    pub fn new(config: GemmaConfig, backend: Arc<dyn GemmaBackend>) -> Result<Self, GemmaError> {
         let declarations = vec![
             IdentityDeclaration {
                 id: "scope".into(),
@@ -137,7 +136,14 @@ impl GemmaAgent {
         let action = arkhe_ego::Action::from_signatures([BehaviorSignature::RespectsBudget]);
         let cycle_outcome = self
             .ego
-            .cycle(action, response.output.as_bytes().to_vec(), 0, 1000, 10, &mut ledger)
+            .cycle(
+                action,
+                response.output.as_bytes().to_vec(),
+                0,
+                1000,
+                10,
+                &mut ledger,
+            )
             .map_err(|e| GemmaError::Agent(format!("ego cycle: {e}")))?;
 
         let action = if response.output.contains("diff --git") {

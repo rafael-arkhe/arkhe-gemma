@@ -1,0 +1,20 @@
+[package]
+name = "arkhe-code-review-judge"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Judge layer: dedup, grounding verificável, precedência static"
+
+[dependencies]
+arkhe-code-review-diff = { path = "../arkhe-code-review-diff", version = "0.1.0" }
+arkhe-code-review-static = { path = "../arkhe-code-review-static", version = "0.1.0" }
+arkhe-code-review-context = { path = "../arkhe-code-review-context", version = "0.1.0" }
+serde.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "arkhe-code-review-diff"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Parser de unified diff com validação de hunk counts"
+
+[dependencies]
+serde.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

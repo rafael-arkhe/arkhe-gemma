@@ -1,28 +1,26 @@
-pub struct Diff {
-    pub files: Vec<FileDiff>,
-}
-pub struct FileDiff {
-    pub new_path: String,
-    pub hunks: Vec<String>,
-}
-impl Diff {
-    pub fn parse(_text: &str) -> Result<Self, String> {
-        Ok(Self {
-            files: vec![FileDiff {
-                new_path: "dummy".to_string(),
-                hunks: vec!["dummy".to_string()],
-            }],
-        })
-    }
-}
-#[derive(Default)]
-pub struct ReviewConfig {
-    _priv: (),
-}
+#![deny(missing_docs)]
+#![deny(unsafe_code)]
+#![warn(missing_debug_implementations)]
+#![cfg_attr(test, allow(clippy::unwrap_used, clippy::expect_used))]
 
-pub struct ReviewOrchestrator;
-impl ReviewOrchestrator {
-    pub fn new(_: Vec<()>, _: Vec<()>, _: ReviewConfig) -> Self {
-        Self
-    }
-}
+//! # arkhe-code-review
+//!
+//! Facade pública para o pipeline de code review.
+//! Reexporta todos os tipos necessários das crates internas.
+
+/// Versão atual da crate.
+pub const VERSION: &str = env!("CARGO_PKG_VERSION");
+
+// Re-exports
+pub use arkhe_code_review_agents::{
+    fan_out, AgentError, AgentKind, FanOutResult, MockLogicAgent, MockSecurityAgent, ReviewAgent,
+};
+pub use arkhe_code_review_context::{ContextError, ReviewContext};
+pub use arkhe_code_review_core::{
+    CoreError, ReviewConfig, ReviewOrchestrator, ReviewResult,
+};
+pub use arkhe_code_review_diff::{Diff, DiffError, FileDiff, Hunk, DiffLine, LineKind};
+pub use arkhe_code_review_judge::{judge, JudgeConfig, JudgeContext, JudgeResult, RejectReason};
+pub use arkhe_code_review_static::{
+    Evidence, Finding, FindingSource, NoUnwrapAnalyzer, Severity, StaticAnalyzer, StaticError,
+};

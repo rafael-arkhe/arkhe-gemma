@@ -1,25 +1,23 @@
 [package]
-name = "arkhe-ai-verify"
+name = "arkhe-code-review-static"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "Verificação de artefatos de IA (safetensors, GGUF, ONNX)"
+description = "Análise estática determinística com evidência verificável"
 
 [dependencies]
+arkhe-code-review-diff = { path = "../arkhe-code-review-diff", version = "0.1.0" }
 serde.workspace = true
-serde_json.workspace = true
 thiserror.workspace = true
-tracing.workspace = true
 blake3.workspace = true
 hex.workspace = true
-sha2.workspace = true
-tokio.workspace = true
+async-trait.workspace = true
 
 [dev-dependencies]
-tempfile.workspace = true
+tokio.workspace = true
 tokio-test.workspace = true
 
 [lints]

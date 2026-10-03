@@ -2,7 +2,7 @@ use std::path::Path;
 
 use serde::{Deserialize, Serialize};
 
-use arkhe_ai_verify::{detect_format, verify_artifact, ArtifactFormat, ArkheStatus, TrustAnchor};
+use arkhe_ai_verify::{detect_format, verify_artifact, ArkheStatus, ArtifactFormat, TrustAnchor};
 
 use crate::error::GemmaError;
 
@@ -77,9 +77,7 @@ pub async fn verify_model_integrity(
         sha256: expected_sha256.to_string(),
         format: format!("{format:?}"),
         size_bytes: std::fs::metadata(path).map(|m| m.len()).unwrap_or(0),
-        source_url: Some(
-            "https://huggingface.co/google/gemma-4-31B-it-qat-w4a16-ct".to_string(),
-        ),
+        source_url: Some("https://huggingface.co/google/gemma-4-31B-it-qat-w4a16-ct".to_string()),
     };
 
     let gate_details: Vec<String> = result

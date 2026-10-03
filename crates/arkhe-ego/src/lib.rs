@@ -35,10 +35,24 @@ impl Action {
     }
 }
 impl Ego {
-    pub fn new(_model: SelfModel, _a: usize, _b: usize, _c: usize, _config: MonitorConfig) -> Result<Self, String> {
+    pub fn new(
+        _model: SelfModel,
+        _a: usize,
+        _b: usize,
+        _c: usize,
+        _config: MonitorConfig,
+    ) -> Result<Self, String> {
         Ok(Self)
     }
-    pub fn cycle(&mut self, _action: Action, _data: Vec<u8>, _a: usize, _b: usize, _c: usize, _ledger: &mut NullLedger) -> Result<CycleOutcome, String> {
+    pub fn cycle(
+        &mut self,
+        _action: Action,
+        _data: Vec<u8>,
+        _a: usize,
+        _b: usize,
+        _c: usize,
+        _ledger: &mut NullLedger,
+    ) -> Result<CycleOutcome, String> {
         Ok(CycleOutcome { ide_count: 0 })
     }
 }

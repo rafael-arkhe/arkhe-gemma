@@ -5,6 +5,9 @@ members = [
 resolver = "2"
 
 [workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
 authors = ["Arkhe Team"]
 license = "MIT"
 repository = "https://github.com/arkhe/arkhe"
@@ -20,6 +23,22 @@ async-trait = "0.1"
 reqwest = "0.12"
 tokio-test = "0.4"
 tempfile = "3.10"
+tracing = "0.1"
+sha2 = "0.10"
+
+
+arkhe-ai-core = { path = "crates/arkhe-ai-core", version = "0.1.0" }
+arkhe-ai-verify = { path = "crates/arkhe-ai-verify", version = "0.1.0" }
+arkhe-ai-routing = { path = "crates/arkhe-ai-routing", version = "0.1.0" }
+arkhe-ai-context = { path = "crates/arkhe-ai-context", version = "0.1.0" }
+
+arkhe-code-review-diff = { path = "crates/arkhe-code-review-diff", version = "0.1.0" }
+arkhe-code-review-context = { path = "crates/arkhe-code-review-context", version = "0.1.0" }
+arkhe-code-review-static = { path = "crates/arkhe-code-review-static", version = "0.1.0" }
+arkhe-code-review-agents = { path = "crates/arkhe-code-review-agents", version = "0.1.0" }
+arkhe-code-review-judge = { path = "crates/arkhe-code-review-judge", version = "0.1.0" }
+arkhe-code-review-core = { path = "crates/arkhe-code-review-core", version = "0.1.0" }
+arkhe-code-review = { path = "crates/arkhe-code-review", version = "0.1.0" }
 
 [workspace.lints.clippy]
 unwrap_used = "warn"

@@ -1,0 +1,30 @@
+[package]
+name = "arkhe-code-review-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Orquestrador de review: diff → static + agents → judge"
+
+[dependencies]
+arkhe-code-review-diff = { path = "../arkhe-code-review-diff", version = "0.1.0" }
+arkhe-code-review-static = { path = "../arkhe-code-review-static", version = "0.1.0" }
+arkhe-code-review-context = { path = "../arkhe-code-review-context", version = "0.1.0" }
+arkhe-code-review-judge = { path = "../arkhe-code-review-judge", version = "0.1.0" }
+arkhe-code-review-agents = { path = "../arkhe-code-review-agents", version = "0.1.0" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+blake3.workspace = true
+hex.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+
+[dev-dependencies]
+tokio-test.workspace = true
+
+[lints]
+workspace = true
