@@ -1,6 +1,7 @@
 [workspace]
 members = [
-    "crates/*"
+    "crates/*",
+    "crates/arkhe-core/fuzz"
 ]
 resolver = "2"
 
