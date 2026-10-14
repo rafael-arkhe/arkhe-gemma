@@ -1,0 +1,4 @@
+SOURCE_DATE_EPOCH=1704067200
+builder=scripts/build_release.py
+verification=two-pass byte-identical ZIP comparison
+published_release_digest=external sibling .zip.sha256 and RELEASE_VERIFICATION.txt

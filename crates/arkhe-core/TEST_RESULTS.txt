@@ -1,0 +1,302 @@
+PASS: independent Python vectors reproducible
+vectors=10
+VectorSetDigest=c9b9388151f1f8be43e79d18b017f7fd871c1a6a2dfab57d2d8a438bf1368814
+RustBuildPass
+RustTestsPass
+DecoderBudgetVerified
+SemanticBoundsVerified
+CrossImplementationParity
+ReproducibleReleaseVerified
+CleanAuditEvidence
+
+running 4 tests
+test tests::empty_rejected ... ok
+test tests::record_hash_deterministic ... ok
+test tests::missing_provenance_rejected ... ok
+test tests::truncate_preserves_system ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 4 tests
+test tests::inv_ai_08_missing_trust_anchor_blocks ... ok
+test tests::inv_ai_10_unverified_model_blocks ... ok
+test tests::inv_ai_09_insufficient_budget_blocks ... ok
+test tests::inv_ai_07_happy_path_produces_record_hash ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 6 tests
+test tests::cost_filter_works ... ok
+test tests::inv_ai_04_rejects_missing_capability ... ok
+test tests::inv_ai_06_rejects_when_all_unverified ... ok
+test tests::latency_filter_works ... ok
+test tests::inv_ai_05_routing_is_deterministic ... ok
+test tests::inv_ai_06_selects_verified_only ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 12 tests
+test security::tests::accept_consistent_offsets ... ok
+test security::tests::alignment_bounds ... ok
+test security::tests::block_size_nonzero ... ok
+test security::tests::n_dims_bounds ... ok
+test security::tests::path_traversal_rejected ... ok
+test tests::detect_all_formats ... ok
+test security::tests::gguf_type_bounds ... ok
+test security::tests::reject_inconsistent_offsets ... ok
+test tests::inv_ai_v_02_unknown_format_is_nonexistent ... ok
+test tests::gate2_and_gate3_are_nonexistent_without_bundle ... ok
+test tests::inv_ai_v_01_verify_produces_record_hash ... ok
+test tests::hash_mismatch_fails_gate1 ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 8 tests
+test tests::agent_kind_name_is_stable ... ok
+test tests::fan_out_with_empty_agents_returns_empty ... ok
+test tests::empty_findings_dont_count_as_models_used ... ok
+test tests::both_agents_produce_findings_on_relevant_diff ... ok
+test tests::inv_cr_06_agent_error_isolated ... ok
+test tests::inv_cr_06_fan_out_collects_findings ... ok
+test tests::inv_cr_06_agent_panic_isolated ... ok
+test tests::security_agent_detects_sql_injection ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 12 tests
+test tests::add_file_propagates_not_found ... ok
+test tests::add_file_populates_context ... ok
+test tests::empty_diff_produces_empty_context ... ok
+test tests::from_diff_reconstructs_with_padding ... ok
+test tests::inv_cr_09_from_diff_supports_grounding ... ok
+test tests::load_missing_file_fails ... ok
+test tests::line_zero_returns_none ... ok
+test tests::window_clamps_to_file_bounds ... ok
+test tests::window_extracts_correct_range ... ok
+test tests::load_is_deterministic ... ok
+test tests::window_zero_center_is_empty ... ok
+test tests::load_reads_lines_correctly ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 8 tests
+test tests::empty_diff_rejected ... ok
+test tests::inv_cr_01_review_produces_record_hash ... ok
+test tests::inv_cr_06_agent_failure_does_not_block ... ok
+test tests::inv_cr_10_cross_model_fatal ... ok
+test tests::inv_cr_06_agent_panic_does_not_block ... ok
+test tests::static_only_not_fatal ... ok
+test tests::record_hash_is_deterministic ... ok
+test tests::truncated_findings_counted_in_rejected ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 6 tests
+test empty_diff_blocks ... ok
+test cross_model_fatal_e2e ... ok
+test agent_failure_does_not_block ... ok
+test agent_panic_does_not_block ... ok
+test happy_path ... ok
+test static_only_reported ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 10 tests
+test tests::context_lines_preserved ... ok
+test tests::hunk_with_no_count_shorthand ... ok
+test tests::inv_cr_11_hunk_count_mismatch_rejected ... ok
+test tests::inv_cr_02_empty_diff_rejected ... ok
+test tests::invalid_hunk_header_rejected ... ok
+test tests::line_numbers_are_correct ... ok
+test tests::malformed_diff_git_line_rejected ... ok
+test tests::multiple_files_parsed ... ok
+test tests::multiple_hunks_per_file ... ok
+test tests::parse_simple_diff ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 13 tests
+test tests::accepted_sorted_by_severity_then_confidence ... ok
+test tests::inv_cr_04_judge_deduplicates ... ok
+test tests::inv_cr_08_static_precedence_disabled ... ok
+test tests::inv_cr_05_low_confidence_filtered ... ok
+test tests::inv_cr_08_static_precedence_in_conflict ... ok
+test tests::inv_cr_09_not_grounded_file_not_in_diff ... ok
+test tests::inv_cr_08_static_wins_even_before_llm_in_order ... ok
+test tests::inv_cr_09_not_grounded_line_out_of_bounds ... ok
+test tests::inv_cr_09_not_grounded_without_context ... ok
+test tests::inv_cr_09_not_grounded_wrong_snippet ... ok
+test tests::require_grounding_false_accepts_ungrounded ... ok
+test tests::truncation_has_own_reason ... ok
+test tests::invalid_finding_is_rejected ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 13 tests
+test tests::dedup_key_ignores_snippet ... ok
+test tests::dedup_key_varies_with_file ... ok
+test tests::dedup_key_varies_with_rule ... ok
+test tests::dedup_key_varies_with_line ... ok
+test tests::inv_cr_03_rejects_empty_evidence ... ok
+test tests::inv_cr_03_rejects_zero_line ... ok
+test tests::inv_cr_04_dedup_key_is_stable ... ok
+test tests::does_not_flag_question_mark ... ok
+test tests::ignores_non_rust_files ... ok
+test tests::detects_unwrap_in_added_line ... ok
+test tests::inv_cr_07_rejects_empty_provenance ... ok
+test tests::rejects_invalid_confidence ... ok
+test tests::severity_ordering_is_total ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 4 tests
+test verify::tests::missing_file_is_fail_closed ... ok
+test backend::tests::echo_backend_produces_record_hash ... ok
+test backend::tests::health_check_passes ... ok
+test verify::tests::unknown_format_rejected ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 1 test
+test python_vectors_match_rust ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 19 tests
+test cumulative_allocation_budget_rejects_before_allocation ... ok
+test cumulative_item_budget_rejects_nested_small_collections ... ok
+test duplicate_key_rejected ... ok
+test domain_mutation_changes_digest ... ok
+test excessive_nesting_rejected ... ok
+test float_encoding_rejected ... ok
+test indefinite_length_rejected ... ok
+test invalid_utf8_rejected ... ok
+test forbidden_tag_rejected ... ok
+test non_shortest_integer_rejected ... ok
+test noncanonical_map_order_rejected ... ok
+test oversized_array_rejected_before_allocation ... ok
+test oversized_bstr_rejected_before_payload_read ... ok
+test oversized_tstr_rejected_before_payload_read ... ok
+test reserved_additional_info_rejected ... ok
+test security_relevant_value_mutation_changes_digest ... ok
+test truncated_payload_rejected ... ok
+test trailing_bytes_rejected ... ok
+test truncated_length_rejected ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 2 tests
+test deterministic_roundtrip_property_sample ... ok
+test arbitrary_short_inputs_never_panic_sample ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+
+running 6 tests
+test artifact_id_is_semantically_bounded ... ok
+test duplicate_causal_parents_are_semantically_idempotent ... ok
+test artifact_envelope_digest_is_deterministic_under_parent_order ... ok
+test record_id_is_semantically_bounded ... ok
+test evidence_record_digest_binds_time_and_witness ... ok
+test causal_parent_count_is_semantically_bounded ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

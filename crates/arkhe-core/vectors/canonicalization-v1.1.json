@@ -1,0 +1,140 @@
+{
+  "profile": "arkhe.cbor.det.v1",
+  "domains_hex": {
+    "canonicalization": "41524b48453a63616e6f6e6963616c697a6174696f6e00",
+    "artifact_envelope": "41524b48453a61727469666163745f656e76656c6f706500",
+    "evidence_record": "41524b48453a65766964656e63655f7265636f726400",
+    "mmr_leaf": "41524b48453a6d6d725f6c65616600",
+    "authorization_proof": "41524b48453a617574686f72697a6174696f6e5f70726f6f6600"
+  },
+  "algorithm": "sha256",
+  "vectors": [
+    {
+      "name": "null",
+      "semantic": null,
+      "canonical_cbor_hex": "f6",
+      "sha256_raw_canonical_hex": "b0b2988b6bbe724bacda5e9e524736de0bc7dae41c46b4213c50e1d35d4e5f13",
+      "sha256_structured_canonicalization_hex": "7edd0002b3ca85676381eda848deb3f68fcb7c337df8c5ccfe436881169017c7",
+      "sha256_structured_artifact_envelope_hex": "80863ce702f7071f6c584c1697f686afb446997e7dce875cc827319eed4ada14",
+      "sha256_structured_evidence_record_hex": "7a9c838e8c08a3de9e247711690d4530f1e65d1f6d0c88b104ea887a53932a45"
+    },
+    {
+      "name": "unsigned-23",
+      "semantic": 23,
+      "canonical_cbor_hex": "17",
+      "sha256_raw_canonical_hex": "8f11b05da785e43e713d03774c6bd3405d99cd3024af334ffd68db663aa37034",
+      "sha256_structured_canonicalization_hex": "4b847c8e63f7be6c65ec777041c83666cc7cfcd6b957b0c9889b121856c533f2",
+      "sha256_structured_artifact_envelope_hex": "534406ead2d11da477470030fb2918a498cae3b89ee3730ab6b52e0dd3eb6205",
+      "sha256_structured_evidence_record_hex": "7f61f04b17d8b732dca7e3a29fa97a1b010092a477688485a7a71db0fe2c364c"
+    },
+    {
+      "name": "unsigned-24",
+      "semantic": 24,
+      "canonical_cbor_hex": "1818",
+      "sha256_raw_canonical_hex": "7c6348f7ea8a4e831aafe688a2557d7a3ab0be8549cdb190a029956ade971b15",
+      "sha256_structured_canonicalization_hex": "c405992498242c0f053edda4748d174383206b144b1c82908892ad07a612d47f",
+      "sha256_structured_artifact_envelope_hex": "af0be3b8b77f2397497b70e2657c5703e5b6be7976763024c5402cd6537ba91c",
+      "sha256_structured_evidence_record_hex": "dbedc26b19b47441d82e713288fbcd1c2d616e2dbf564e1ccc01c28e0b36d9fd"
+    },
+    {
+      "name": "negative-1",
+      "semantic": -1,
+      "canonical_cbor_hex": "20",
+      "sha256_raw_canonical_hex": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+      "sha256_structured_canonicalization_hex": "1d691ed3f3ef5e27889ba1a93264636bd6e75dd8d9ede5b509e33480c6a9e186",
+      "sha256_structured_artifact_envelope_hex": "03c94acd121b192d9e1add06ad4e48ee76cf8aaa95b34657cdf3dc64210648ec",
+      "sha256_structured_evidence_record_hex": "8d41f3d5d0622053027d9122a58c36ea70e308823933bd4f620f6a1cf9b506c1"
+    },
+    {
+      "name": "bytes-000102",
+      "semantic": {
+        "$bytes": "000102"
+      },
+      "canonical_cbor_hex": "43000102",
+      "sha256_raw_canonical_hex": "3288fcd136a54e61266a96d74e4d88715df4c8892fa67bb1dac49b59ce6176ed",
+      "sha256_structured_canonicalization_hex": "34e31a6583d976fdb98e501e50d3705c077b9d6757ced862e2344eb71296d771",
+      "sha256_structured_artifact_envelope_hex": "787a03aa69105b3ce9ed0ec4b89f80597c573a2c56223fb4b739567589f7475f",
+      "sha256_structured_evidence_record_hex": "d34be76d38144ebb5d919ed2f0e71e1a18815da38775843b35e141d973e7103e"
+    },
+    {
+      "name": "text-arkhe",
+      "semantic": "arkhe",
+      "canonical_cbor_hex": "6561726b6865",
+      "sha256_raw_canonical_hex": "66de06b994388423fd2411811dbf2f52b0a7cf2ad667b807096b49679bf8d299",
+      "sha256_structured_canonicalization_hex": "8bf233b52e73c7d0d0f3f912ff19af159a039989b2a4209d19b6556837302ada",
+      "sha256_structured_artifact_envelope_hex": "ffe66beb01233bc4f223318f06df2c5454713cb740dc1fc292cd576b904b9f31",
+      "sha256_structured_evidence_record_hex": "adabb201c13879484d8354059ac0a1ea51b555e42ea8ce54b55d44095f823b80"
+    },
+    {
+      "name": "array-mixed",
+      "semantic": [
+        1,
+        "x",
+        {
+          "$bytes": "aa"
+        },
+        null,
+        true
+      ],
+      "canonical_cbor_hex": "8501617841aaf6f5",
+      "sha256_raw_canonical_hex": "46c2da10ccae8080589f254f00d058354b29b16e82a53876f9978253c9492387",
+      "sha256_structured_canonicalization_hex": "ac45ea1f3aa8c99706e13f023881aa5a507ade7aa20b9960efe87c7fd0d31cc0",
+      "sha256_structured_artifact_envelope_hex": "2fe8fcd44abd677b6edd9716e9bbb29c15505c7a079497cd54bc8af9b252563a",
+      "sha256_structured_evidence_record_hex": "2992d257f0771b6828a71f7744bdeb061c5b95c362f25a597d061b80c9024044"
+    },
+    {
+      "name": "map-order-a",
+      "semantic": {
+        "$map": [
+          [
+            "b",
+            2
+          ],
+          [
+            "a",
+            1
+          ]
+        ]
+      },
+      "canonical_cbor_hex": "a2616101616202",
+      "sha256_raw_canonical_hex": "a0d3af9e86e5517f729bad0657e2c6f3b7d03899894c8d6b33759074c893b5e3",
+      "sha256_structured_canonicalization_hex": "3435383be29f63958e42942e9ed81257e9a9782cd1cd03ef48cc87c7f9239c20",
+      "sha256_structured_artifact_envelope_hex": "ad4d8d9b051a03b191cd09a0633a34c09f7ef8a7c892647e191e0c120567afd8",
+      "sha256_structured_evidence_record_hex": "eeda275cf0533e6d9f73cae1cb808b18916c8e5535694ecf2a8bc5f7ab207362"
+    },
+    {
+      "name": "map-order-b",
+      "semantic": {
+        "$map": [
+          [
+            "a",
+            1
+          ],
+          [
+            "b",
+            2
+          ]
+        ]
+      },
+      "canonical_cbor_hex": "a2616101616202",
+      "sha256_raw_canonical_hex": "a0d3af9e86e5517f729bad0657e2c6f3b7d03899894c8d6b33759074c893b5e3",
+      "sha256_structured_canonicalization_hex": "3435383be29f63958e42942e9ed81257e9a9782cd1cd03ef48cc87c7f9239c20",
+      "sha256_structured_artifact_envelope_hex": "ad4d8d9b051a03b191cd09a0633a34c09f7ef8a7c892647e191e0c120567afd8",
+      "sha256_structured_evidence_record_hex": "eeda275cf0533e6d9f73cae1cb808b18916c8e5535694ecf2a8bc5f7ab207362"
+    },
+    {
+      "name": "unicode-no-normalization",
+      "semantic": "é",
+      "canonical_cbor_hex": "62c3a9",
+      "sha256_raw_canonical_hex": "701813d6d5ac9e087e4b469881bd4bf116fee5027a3b7ea436d513b0d8049737",
+      "sha256_structured_canonicalization_hex": "7e534fe08bbb96758cf473fb497ca6251a15c905733997f89900a918a31f76a8",
+      "sha256_structured_artifact_envelope_hex": "c134756d3d8069b91e8fdbd1d683a1c6652e8eff9e61cacd5e4d266694a63d76",
+      "sha256_structured_evidence_record_hex": "bd68418e9cc633a5140be9056c27c2218c637c2c29e5e82cde98d2643b3b3051"
+    }
+  ],
+  "invariants": {
+    "map_order_equivalent": true,
+    "map_order_digest_equivalent": true,
+    "domain_separation_distinct": true
+  }
+}

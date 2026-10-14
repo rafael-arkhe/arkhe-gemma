@@ -1,0 +1,16 @@
+{
+  "version": "1.2.2",
+  "classification": "PRE-BUILD-VERIFIED HARDENED CANDIDATE",
+  "gates": {
+    "RustBuildPass": "PENDING",
+    "RustTestsPass": "PENDING",
+    "DependencyLockPinned": "PENDING",
+    "DecoderCostBudgetImplemented": "PASS",
+    "DecoderBudgetVerified": "PENDING_RUST_TESTS_AND_FUZZ",
+    "SemanticBoundsImplemented": "PASS",
+    "SemanticBoundsVerified": "PENDING_RUST_TESTS",
+    "CrossImplementationParity": "PASS",
+    "CleanAuditEvidence": "PASS",
+    "ReproducibleReleaseVerified": "VERIFIED_BY_TWO_PASS_RELEASE_BUILDER"
+  }
+}
