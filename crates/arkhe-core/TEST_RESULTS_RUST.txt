@@ -1,97 +1,108 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.17s
+     Running unittests src/lib.rs (target/debug/deps/arkhe_ai_context-f6b35def55833e77)
 
 running 4 tests
 test tests::empty_rejected ... ok
-test tests::record_hash_deterministic ... ok
-test tests::missing_provenance_rejected ... ok
 test tests::truncate_preserves_system ... ok
+test tests::missing_provenance_rejected ... ok
+test tests::record_hash_deterministic ... ok
 
 test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_ai_core-0736fa4e00104f3a)
 
 running 4 tests
 test tests::inv_ai_08_missing_trust_anchor_blocks ... ok
-test tests::inv_ai_10_unverified_model_blocks ... ok
-test tests::inv_ai_09_insufficient_budget_blocks ... ok
 test tests::inv_ai_07_happy_path_produces_record_hash ... ok
+test tests::inv_ai_09_insufficient_budget_blocks ... ok
+test tests::inv_ai_10_unverified_model_blocks ... ok
 
 test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_ai_routing-e918d4a04536fce1)
 
 running 6 tests
 test tests::cost_filter_works ... ok
 test tests::inv_ai_04_rejects_missing_capability ... ok
 test tests::inv_ai_06_rejects_when_all_unverified ... ok
-test tests::latency_filter_works ... ok
 test tests::inv_ai_05_routing_is_deterministic ... ok
 test tests::inv_ai_06_selects_verified_only ... ok
+test tests::latency_filter_works ... ok
 
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_ai_verify-fc8fafbdf94d9a8e)
 
 running 12 tests
 test security::tests::accept_consistent_offsets ... ok
-test security::tests::alignment_bounds ... ok
 test security::tests::block_size_nonzero ... ok
+test security::tests::alignment_bounds ... ok
+test security::tests::gguf_type_bounds ... ok
 test security::tests::n_dims_bounds ... ok
 test security::tests::path_traversal_rejected ... ok
-test tests::detect_all_formats ... ok
-test security::tests::gguf_type_bounds ... ok
 test security::tests::reject_inconsistent_offsets ... ok
+test tests::detect_all_formats ... ok
 test tests::inv_ai_v_02_unknown_format_is_nonexistent ... ok
+test tests::hash_mismatch_fails_gate1 ... ok
 test tests::gate2_and_gate3_are_nonexistent_without_bundle ... ok
 test tests::inv_ai_v_01_verify_produces_record_hash ... ok
-test tests::hash_mismatch_fails_gate1 ... ok
 
 test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review-10533ec7fbdb3828)
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review_agents-8476980c8cd17d0d)
 
 running 8 tests
-test tests::agent_kind_name_is_stable ... ok
 test tests::fan_out_with_empty_agents_returns_empty ... ok
-test tests::empty_findings_dont_count_as_models_used ... ok
+test tests::agent_kind_name_is_stable ... ok
 test tests::both_agents_produce_findings_on_relevant_diff ... ok
+test tests::empty_findings_dont_count_as_models_used ... ok
 test tests::inv_cr_06_agent_error_isolated ... ok
-test tests::inv_cr_06_fan_out_collects_findings ... ok
-test tests::inv_cr_06_agent_panic_isolated ... ok
 test tests::security_agent_detects_sql_injection ... ok
+test tests::inv_cr_06_agent_panic_isolated ... ok
+test tests::inv_cr_06_fan_out_collects_findings ... ok
 
 test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review_context-7a830298d4cccf5c)
 
 running 12 tests
-test tests::add_file_propagates_not_found ... ok
-test tests::add_file_populates_context ... ok
 test tests::empty_diff_produces_empty_context ... ok
 test tests::from_diff_reconstructs_with_padding ... ok
+test tests::add_file_populates_context ... ok
 test tests::inv_cr_09_from_diff_supports_grounding ... ok
-test tests::load_missing_file_fails ... ok
 test tests::line_zero_returns_none ... ok
+test tests::add_file_propagates_not_found ... ok
+test tests::load_missing_file_fails ... ok
 test tests::window_clamps_to_file_bounds ... ok
-test tests::window_extracts_correct_range ... ok
 test tests::load_is_deterministic ... ok
-test tests::window_zero_center_is_empty ... ok
+test tests::window_extracts_correct_range ... ok
 test tests::load_reads_lines_correctly ... ok
+test tests::window_zero_center_is_empty ... ok
 
 test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review_core-995dbaf47480814c)
 
 running 8 tests
 test tests::empty_diff_rejected ... ok
 test tests::inv_cr_01_review_produces_record_hash ... ok
+test tests::inv_cr_06_agent_panic_does_not_block ... ok
 test tests::inv_cr_06_agent_failure_does_not_block ... ok
 test tests::inv_cr_10_cross_model_fatal ... ok
-test tests::inv_cr_06_agent_panic_does_not_block ... ok
 test tests::static_only_not_fatal ... ok
-test tests::record_hash_is_deterministic ... ok
 test tests::truncated_findings_counted_in_rejected ... ok
+test tests::record_hash_is_deterministic ... ok
 
 test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/fail_closed.rs (target/debug/deps/fail_closed-ec0f85357dc980c0)
 
 running 6 tests
 test empty_diff_blocks ... ok
@@ -103,14 +114,15 @@ test static_only_reported ... ok
 
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review_diff-f6e166aac5869294)
 
 running 10 tests
 test tests::context_lines_preserved ... ok
 test tests::hunk_with_no_count_shorthand ... ok
-test tests::inv_cr_11_hunk_count_mismatch_rejected ... ok
 test tests::inv_cr_02_empty_diff_rejected ... ok
-test tests::invalid_hunk_header_rejected ... ok
 test tests::line_numbers_are_correct ... ok
+test tests::invalid_hunk_header_rejected ... ok
+test tests::inv_cr_11_hunk_count_mismatch_rejected ... ok
 test tests::malformed_diff_git_line_rejected ... ok
 test tests::multiple_files_parsed ... ok
 test tests::multiple_hunks_per_file ... ok
@@ -118,24 +130,26 @@ test tests::parse_simple_diff ... ok
 
 test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review_judge-ec497afe3edb5629)
 
 running 13 tests
 test tests::accepted_sorted_by_severity_then_confidence ... ok
-test tests::inv_cr_04_judge_deduplicates ... ok
-test tests::inv_cr_08_static_precedence_disabled ... ok
 test tests::inv_cr_05_low_confidence_filtered ... ok
+test tests::inv_cr_08_static_precedence_disabled ... ok
+test tests::inv_cr_04_judge_deduplicates ... ok
 test tests::inv_cr_08_static_precedence_in_conflict ... ok
-test tests::inv_cr_09_not_grounded_file_not_in_diff ... ok
 test tests::inv_cr_08_static_wins_even_before_llm_in_order ... ok
+test tests::inv_cr_09_not_grounded_file_not_in_diff ... ok
 test tests::inv_cr_09_not_grounded_line_out_of_bounds ... ok
-test tests::inv_cr_09_not_grounded_without_context ... ok
 test tests::inv_cr_09_not_grounded_wrong_snippet ... ok
+test tests::inv_cr_09_not_grounded_without_context ... ok
+test tests::invalid_finding_is_rejected ... ok
 test tests::require_grounding_false_accepts_ungrounded ... ok
 test tests::truncation_has_own_reason ... ok
-test tests::invalid_finding_is_rejected ... ok
 
 test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_code_review_static-4ca0cf5c3a070731)
 
 running 13 tests
 test tests::dedup_key_ignores_snippet ... ok
@@ -146,63 +160,69 @@ test tests::inv_cr_03_rejects_empty_evidence ... ok
 test tests::inv_cr_03_rejects_zero_line ... ok
 test tests::inv_cr_04_dedup_key_is_stable ... ok
 test tests::does_not_flag_question_mark ... ok
-test tests::ignores_non_rust_files ... ok
 test tests::detects_unwrap_in_added_line ... ok
+test tests::ignores_non_rust_files ... ok
 test tests::inv_cr_07_rejects_empty_provenance ... ok
 test tests::rejects_invalid_confidence ... ok
 test tests::severity_ordering_is_total ... ok
 
 test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_ego-750c254320b65dc7)
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_gemma-8a75b34ba60d16d3)
 
 running 4 tests
+test backend::tests::health_check_passes ... ok
 test verify::tests::missing_file_is_fail_closed ... ok
 test backend::tests::echo_backend_produces_record_hash ... ok
-test backend::tests::health_check_passes ... ok
 test verify::tests::unknown_format_rejected ... ok
 
 test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/lib.rs (target/debug/deps/arkhe_p0_foundation-6af2aef1ca31288d)
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/golden_vectors.rs (target/debug/deps/golden_vectors-2db716b86c737139)
 
 running 1 test
 test python_vectors_match_rust ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/mutation.rs (target/debug/deps/mutation-525a2429badf6920)
 
 running 19 tests
 test cumulative_allocation_budget_rejects_before_allocation ... ok
-test cumulative_item_budget_rejects_nested_small_collections ... ok
 test duplicate_key_rejected ... ok
-test domain_mutation_changes_digest ... ok
 test excessive_nesting_rejected ... ok
+test cumulative_item_budget_rejects_nested_small_collections ... ok
 test float_encoding_rejected ... ok
+test forbidden_tag_rejected ... ok
 test indefinite_length_rejected ... ok
 test invalid_utf8_rejected ... ok
-test forbidden_tag_rejected ... ok
-test non_shortest_integer_rejected ... ok
+test domain_mutation_changes_digest ... ok
 test noncanonical_map_order_rejected ... ok
+test non_shortest_integer_rejected ... ok
 test oversized_array_rejected_before_allocation ... ok
 test oversized_bstr_rejected_before_payload_read ... ok
 test oversized_tstr_rejected_before_payload_read ... ok
 test reserved_additional_info_rejected ... ok
 test security_relevant_value_mutation_changes_digest ... ok
-test truncated_payload_rejected ... ok
 test trailing_bytes_rejected ... ok
 test truncated_length_rejected ... ok
+test truncated_payload_rejected ... ok
 
 test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/property.rs (target/debug/deps/property-6896dd60957d6ef3)
 
 running 2 tests
 test deterministic_roundtrip_property_sample ... ok
@@ -210,83 +230,496 @@ test arbitrary_short_inputs_never_panic_sample ... ok
 
 test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
 
+     Running tests/struct_contracts.rs (target/debug/deps/struct_contracts-0fa266889beed1fd)
 
 running 6 tests
 test artifact_id_is_semantically_bounded ... ok
 test duplicate_causal_parents_are_semantically_idempotent ... ok
 test artifact_envelope_digest_is_deterministic_under_parent_order ... ok
-test record_id_is_semantically_bounded ... ok
 test evidence_record_digest_binds_time_and_witness ... ok
+test record_id_is_semantically_bounded ... ok
 test causal_parent_count_is_semantically_bounded ... ok
 
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_ai_context
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_ai_core
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_ai_routing
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_ai_verify
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review_agents
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review_context
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review_core
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review_diff
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review_judge
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_code_review_static
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_ego
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_gemma
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+   Doc-tests arkhe_p0_foundation
 
 running 0 tests
 
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.14s
+     Running tests/mutation.rs (target/debug/deps/mutation-a02b67876b1a9f11)
+
+running 19 tests
+test cumulative_allocation_budget_rejects_before_allocation ... ok
+test cumulative_item_budget_rejects_nested_small_collections ... ok
+test duplicate_key_rejected ... ok
+test float_encoding_rejected ... ok
+test excessive_nesting_rejected ... ok
+test forbidden_tag_rejected ... ok
+test domain_mutation_changes_digest ... ok
+test indefinite_length_rejected ... ok
+test oversized_array_rejected_before_allocation ... ok
+test noncanonical_map_order_rejected ... ok
+test invalid_utf8_rejected ... ok
+test oversized_bstr_rejected_before_payload_read ... ok
+test non_shortest_integer_rejected ... ok
+test oversized_tstr_rejected_before_payload_read ... ok
+test reserved_additional_info_rejected ... ok
+test trailing_bytes_rejected ... ok
+test security_relevant_value_mutation_changes_digest ... ok
+test truncated_payload_rejected ... ok
+test truncated_length_rejected ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.14s
+     Running tests/property.rs (target/debug/deps/property-c88834c528d69aec)
+
+running 2 tests
+test deterministic_roundtrip_property_sample ... ok
+test arbitrary_short_inputs_never_panic_sample ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+    Checking tokio v1.53.3
+    Checking arkhe-code-review-diff v0.1.0 (/app/crates/arkhe-code-review-diff)
+    Checking bitflags v2.13.2
+    Checking arkhe-p0-foundation v0.1.1 (/app/crates/arkhe-core)
+    Checking openssl v0.10.81
+    Checking arkhe-code-review-context v0.1.0 (/app/crates/arkhe-code-review-context)
+    Checking arkhe-code-review-static v0.1.0 (/app/crates/arkhe-code-review-static)
+    Checking linux-raw-sys v0.12.1
+    Checking arkhe-code-review-judge v0.1.0 (/app/crates/arkhe-code-review-judge)
+    Checking getrandom v0.4.3
+    Checking arkhe-ai-routing v0.1.0 (/app/crates/arkhe-ai-routing)
+    Checking rustix v1.1.5
+    Checking arkhe-ai-context v0.1.0 (/app/crates/arkhe-ai-context)
+    Checking fastrand v2.5.0
+    Checking arkhe-ego v0.3.3 (/app/crates/arkhe-ego)
+    Checking arkhe-p0-foundation-fuzz v0.0.0 (/app/crates/arkhe-core/fuzz)
+    Checking tempfile v3.27.0
+    Checking native-tls v0.2.18
+    Checking tokio-stream v0.1.19
+    Checking tokio-util v0.7.20
+    Checking arkhe-code-review-agents v0.1.0 (/app/crates/arkhe-code-review-agents)
+    Checking tokio-native-tls v0.3.1
+    Checking tower v0.5.3
+    Checking arkhe-code-review-core v0.1.0 (/app/crates/arkhe-code-review-core)
+    Checking tokio-test v0.4.6
+    Checking h2 v0.4.20
+    Checking arkhe-ai-verify v0.1.0 (/app/crates/arkhe-ai-verify)
+    Checking arkhe-code-review v0.1.2 (/app/crates/arkhe-code-review)
+    Checking tower-http v0.6.11
+    Checking arkhe-ai-core v0.1.0 (/app/crates/arkhe-ai-core)
+    Checking hyper v1.12.0
+    Checking hyper-util v0.1.21
+    Checking hyper-tls v0.6.0
+    Checking reqwest v0.12.28
+    Checking arkhe-gemma v0.1.0 (/app/crates/arkhe-gemma)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.14s
+    Fetching advisory database from `https://github.com/RustSec/advisory-db.git`
+      Loaded 1329 security advisories (from /home/jules/.cargo/advisory-db)
+    Updating crates.io index
+    Scanning Cargo.lock for vulnerabilities (197 crate dependencies)
+warning[no-license-field]: license expression was not specified in manifest for crate 'arkhe-p0-foundation-fuzz = 0.0.0'
+ ├ arkhe-p0-foundation-fuzz v0.0.0
+
+warning[unlicensed]: a valid license expression could not be retrieved for the crate
+  ┌─ path+file:///app/crates/arkhe-core/fuzz#arkhe-p0-foundation-fuzz@0.0.0-synthesized.toml:2:9
+  │
+2 │ name = "arkhe-p0-foundation-fuzz"
+  │         ━━━━━━━━━━━━━━━━━━━━━━━━
+  │
+  ├ arkhe-p0-foundation-fuzz v0.0.0 (*)
+
+error[unlicensed]: arkhe-p0-foundation-fuzz = 0.0.0 is unlicensed
+ ├ arkhe-p0-foundation-fuzz v0.0.0 (*)
+
+error[rejected]: failed to satisfy license requirements
+   ┌─ /home/jules/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libfuzzer-sys-0.4.13/Cargo.toml:36:36
+   │
+36 │ license = "(MIT OR Apache-2.0) AND NCSA"
+   │            ────────────────────────━━━━
+   │                                    │
+   │                                    rejected: license is not explicitly allowed
+   │
+   ├ NCSA - University of Illinois/NCSA Open Source License:
+   ├   - OSI approved
+   ├   - FSF Free/Libre
+   ├ libfuzzer-sys v0.4.13
+     └── arkhe-p0-foundation-fuzz v0.0.0
+
+warning[duplicate]: found 2 duplicate entries for crate 'base64'
+   ┌─ /app/Cargo.lock:20:1
+   │
+20 │ ╭ base64 0.22.1 registry+https://github.com/rust-lang/crates.io-index
+21 │ │ base64 0.23.1 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰───────────────────────────────────────────────────────────────────┘ lock entries
+   │
+   ├ base64 v0.22.1
+     └── reqwest v0.12.28
+         └── arkhe-gemma v0.1.0
+   ├ base64 v0.23.1
+     └── hyper-util v0.1.21
+         ├── hyper-tls v0.6.0
+         │   └── reqwest v0.12.28
+         │       └── arkhe-gemma v0.1.0
+         └── reqwest v0.12.28 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'core-foundation'
+   ┌─ /app/Cargo.lock:30:1
+   │
+30 │ ╭ core-foundation 0.9.4 registry+https://github.com/rust-lang/crates.io-index
+31 │ │ core-foundation 0.10.1 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰────────────────────────────────────────────────────────────────────────────┘ lock entries
+   │
+   ├ core-foundation v0.9.4
+     └── system-configuration v0.7.0
+         └── hyper-util v0.1.21
+             ├── hyper-tls v0.6.0
+             │   └── reqwest v0.12.28
+             │       └── arkhe-gemma v0.1.0
+             └── reqwest v0.12.28 (*)
+   ├ core-foundation v0.10.1
+     └── security-framework v3.7.0
+         └── native-tls v0.2.18
+             ├── hyper-tls v0.6.0
+             │   └── reqwest v0.12.28
+             │       └── arkhe-gemma v0.1.0
+             ├── reqwest v0.12.28 (*)
+             └── tokio-native-tls v0.3.1
+                 ├── hyper-tls v0.6.0 (*)
+                 └── reqwest v0.12.28 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'cpufeatures'
+   ┌─ /app/Cargo.lock:34:1
+   │
+34 │ ╭ cpufeatures 0.2.17 registry+https://github.com/rust-lang/crates.io-index
+35 │ │ cpufeatures 0.3.1 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰───────────────────────────────────────────────────────────────────────┘ lock entries
+   │
+   ├ cpufeatures v0.2.17
+     └── sha2 v0.10.9
+         ├── arkhe-ai-verify v0.1.0
+         │   └── arkhe-gemma v0.1.0
+         └── arkhe-p0-foundation v0.1.1
+             └── arkhe-p0-foundation-fuzz v0.0.0
+   ├ cpufeatures v0.3.1
+     └── blake3 v1.8.7
+         ├── arkhe-ai-context v0.1.0
+         │   └── arkhe-ai-core v0.1.0
+         │       └── arkhe-gemma v0.1.0
+         ├── arkhe-ai-core v0.1.0 (*)
+         ├── arkhe-ai-routing v0.1.0
+         │   └── arkhe-ai-core v0.1.0 (*)
+         ├── arkhe-ai-verify v0.1.0
+         │   └── arkhe-gemma v0.1.0 (*)
+         ├── arkhe-code-review-context v0.1.0
+         │   ├── arkhe-code-review v0.1.2
+         │   │   └── arkhe-gemma v0.1.0 (*)
+         │   ├── arkhe-code-review-agents v0.1.0
+         │   │   ├── arkhe-code-review v0.1.2 (*)
+         │   │   └── arkhe-code-review-core v0.1.0
+         │   │       └── arkhe-code-review v0.1.2 (*)
+         │   ├── arkhe-code-review-core v0.1.0 (*)
+         │   └── arkhe-code-review-judge v0.1.0
+         │       ├── arkhe-code-review v0.1.2 (*)
+         │       └── arkhe-code-review-core v0.1.0 (*)
+         ├── arkhe-code-review-core v0.1.0 (*)
+         ├── arkhe-code-review-static v0.1.0
+         │   ├── arkhe-code-review v0.1.2 (*)
+         │   ├── arkhe-code-review-agents v0.1.0 (*)
+         │   ├── arkhe-code-review-core v0.1.0 (*)
+         │   └── arkhe-code-review-judge v0.1.0 (*)
+         ├── arkhe-gemma v0.1.0 (*)
+         └── arkhe-p0-foundation v0.1.1
+             └── arkhe-p0-foundation-fuzz v0.0.0
+
+warning[duplicate]: found 2 duplicate entries for crate 'syn'
+    ┌─ /app/Cargo.lock:127:1
+    │
+127 │ ╭ syn 2.0.119 registry+https://github.com/rust-lang/crates.io-index
+128 │ │ syn 3.0.9 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰───────────────────────────────────────────────────────────────┘ lock entries
+    │
+    ├ syn v2.0.119
+      ├── openssl-macros v0.1.1
+      │   └── openssl v0.10.81
+      │       └── native-tls v0.2.18
+      │           ├── hyper-tls v0.6.0
+      │           │   └── reqwest v0.12.28
+      │           │       └── arkhe-gemma v0.1.0
+      │           ├── reqwest v0.12.28 (*)
+      │           └── tokio-native-tls v0.3.1
+      │               ├── hyper-tls v0.6.0 (*)
+      │               └── reqwest v0.12.28 (*)
+      └── tracing-attributes v0.1.31
+          └── tracing v0.1.44
+              ├── arkhe-ai-core v0.1.0
+              │   └── arkhe-gemma v0.1.0 (*)
+              ├── arkhe-ai-verify v0.1.0
+              │   └── arkhe-gemma v0.1.0 (*)
+              ├── arkhe-code-review-agents v0.1.0
+              │   ├── arkhe-code-review v0.1.2
+              │   │   └── arkhe-gemma v0.1.0 (*)
+              │   └── arkhe-code-review-core v0.1.0
+              │       └── arkhe-code-review v0.1.2 (*)
+              ├── arkhe-code-review-core v0.1.0 (*)
+              ├── arkhe-code-review-judge v0.1.0
+              │   ├── arkhe-code-review v0.1.2 (*)
+              │   └── arkhe-code-review-core v0.1.0 (*)
+              ├── h2 v0.4.20
+              │   ├── hyper v1.12.0
+              │   │   ├── hyper-tls v0.6.0 (*)
+              │   │   ├── hyper-util v0.1.21
+              │   │   │   ├── hyper-tls v0.6.0 (*)
+              │   │   │   └── reqwest v0.12.28 (*)
+              │   │   └── reqwest v0.12.28 (*)
+              │   └── reqwest v0.12.28 (*)
+              └── hyper-util v0.1.21 (*)
+    ├ syn v3.0.9
+      ├── async-trait v0.1.92
+      │   ├── arkhe-ai-core v0.1.0
+      │   │   └── arkhe-gemma v0.1.0
+      │   ├── arkhe-code-review-agents v0.1.0
+      │   │   ├── arkhe-code-review v0.1.2
+      │   │   │   └── arkhe-gemma v0.1.0 (*)
+      │   │   └── arkhe-code-review-core v0.1.0
+      │   │       └── arkhe-code-review v0.1.2 (*)
+      │   ├── arkhe-code-review-core v0.1.0 (*)
+      │   ├── arkhe-code-review-static v0.1.0
+      │   │   ├── arkhe-code-review v0.1.2 (*)
+      │   │   ├── arkhe-code-review-agents v0.1.0 (*)
+      │   │   ├── arkhe-code-review-core v0.1.0 (*)
+      │   │   └── arkhe-code-review-judge v0.1.0
+      │   │       ├── arkhe-code-review v0.1.2 (*)
+      │   │       └── arkhe-code-review-core v0.1.0 (*)
+      │   └── arkhe-gemma v0.1.0 (*)
+      ├── displaydoc v0.2.7
+      │   ├── icu_collections v2.3.0
+      │   │   ├── icu_normalizer v2.3.0
+      │   │   │   └── idna_adapter v1.2.2
+      │   │   │       └── idna v1.1.0
+      │   │   │           └── url v2.5.8
+      │   │   │               ├── reqwest v0.12.28
+      │   │   │               │   └── arkhe-gemma v0.1.0 (*)
+      │   │   │               └── tower-http v0.6.11
+      │   │   │                   └── reqwest v0.12.28 (*)
+      │   │   └── icu_properties v2.3.0
+      │   │       └── idna_adapter v1.2.2 (*)
+      │   ├── icu_locale_core v2.3.0
+      │   │   ├── icu_properties v2.3.0 (*)
+      │   │   └── icu_provider v2.3.1
+      │   │       ├── icu_normalizer v2.3.0 (*)
+      │   │       └── icu_properties v2.3.0 (*)
+      │   ├── icu_properties v2.3.0 (*)
+      │   ├── icu_provider v2.3.1 (*)
+      │   ├── tinystr v0.8.4
+      │   │   └── icu_locale_core v2.3.0 (*)
+      │   └── zerotrie v0.2.5
+      │       ├── icu_properties v2.3.0 (*)
+      │       └── icu_provider v2.3.1 (*)
+      ├── serde_derive v1.0.229
+      │   └── serde v1.0.229
+      │       ├── arkhe-ai-context v0.1.0
+      │       │   └── arkhe-ai-core v0.1.0 (*)
+      │       ├── arkhe-ai-core v0.1.0 (*)
+      │       ├── arkhe-ai-routing v0.1.0
+      │       │   └── arkhe-ai-core v0.1.0 (*)
+      │       ├── arkhe-ai-verify v0.1.0
+      │       │   └── arkhe-gemma v0.1.0 (*)
+      │       ├── arkhe-code-review-agents v0.1.0 (*)
+      │       ├── arkhe-code-review-context v0.1.0
+      │       │   ├── arkhe-code-review v0.1.2 (*)
+      │       │   ├── arkhe-code-review-agents v0.1.0 (*)
+      │       │   ├── arkhe-code-review-core v0.1.0 (*)
+      │       │   └── arkhe-code-review-judge v0.1.0 (*)
+      │       ├── arkhe-code-review-core v0.1.0 (*)
+      │       ├── arkhe-code-review-diff v0.1.0
+      │       │   ├── arkhe-code-review v0.1.2 (*)
+      │       │   ├── arkhe-code-review-agents v0.1.0 (*)
+      │       │   ├── arkhe-code-review-context v0.1.0 (*)
+      │       │   ├── arkhe-code-review-core v0.1.0 (*)
+      │       │   ├── arkhe-code-review-judge v0.1.0 (*)
+      │       │   └── arkhe-code-review-static v0.1.0 (*)
+      │       ├── arkhe-code-review-judge v0.1.0 (*)
+      │       ├── arkhe-code-review-static v0.1.0 (*)
+      │       ├── arkhe-gemma v0.1.0 (*)
+      │       ├── (dev) arkhe-p0-foundation v0.1.1
+      │       │   └── arkhe-p0-foundation-fuzz v0.0.0
+      │       ├── reqwest v0.12.28 (*)
+      │       └── serde_urlencoded v0.7.1
+      │           └── reqwest v0.12.28 (*)
+      ├── synstructure v0.14.0
+      │   ├── yoke-derive v0.8.4
+      │   │   └── yoke v0.8.3
+      │   │       ├── icu_collections v2.3.0 (*)
+      │   │       ├── icu_provider v2.3.1 (*)
+      │   │       ├── zerotrie v0.2.5 (*)
+      │   │       └── zerovec v0.11.8
+      │   │           ├── icu_collections v2.3.0 (*)
+      │   │           ├── icu_locale_core v2.3.0 (*)
+      │   │           ├── icu_normalizer v2.3.0 (*)
+      │   │           ├── icu_properties v2.3.0 (*)
+      │   │           ├── icu_provider v2.3.1 (*)
+      │   │           ├── potential_utf v0.1.6
+      │   │           │   └── icu_collections v2.3.0 (*)
+      │   │           └── tinystr v0.8.4 (*)
+      │   └── zerofrom-derive v0.1.8
+      │       └── zerofrom v0.1.8
+      │           ├── icu_collections v2.3.0 (*)
+      │           ├── icu_provider v2.3.1 (*)
+      │           ├── yoke v0.8.3 (*)
+      │           ├── zerotrie v0.2.5 (*)
+      │           └── zerovec v0.11.8 (*)
+      ├── thiserror-impl v2.0.21
+      │   └── thiserror v2.0.21
+      │       ├── arkhe-ai-context v0.1.0 (*)
+      │       ├── arkhe-ai-core v0.1.0 (*)
+      │       ├── arkhe-ai-routing v0.1.0 (*)
+      │       ├── arkhe-ai-verify v0.1.0 (*)
+      │       ├── arkhe-code-review-agents v0.1.0 (*)
+      │       ├── arkhe-code-review-context v0.1.0 (*)
+      │       ├── arkhe-code-review-core v0.1.0 (*)
+      │       ├── arkhe-code-review-diff v0.1.0 (*)
+      │       ├── arkhe-code-review-judge v0.1.0 (*)
+      │       ├── arkhe-code-review-static v0.1.0 (*)
+      │       └── arkhe-gemma v0.1.0 (*)
+      ├── tokio-macros v2.7.2
+      │   └── tokio v1.53.3
+      │       ├── arkhe-ai-core v0.1.0 (*)
+      │       ├── arkhe-ai-verify v0.1.0 (*)
+      │       ├── arkhe-code-review-agents v0.1.0 (*)
+      │       ├── arkhe-code-review-core v0.1.0 (*)
+      │       ├── (dev) arkhe-code-review-static v0.1.0 (*)
+      │       ├── arkhe-gemma v0.1.0 (*)
+      │       ├── h2 v0.4.20
+      │       │   ├── hyper v1.12.0
+      │       │   │   ├── hyper-tls v0.6.0
+      │       │   │   │   └── reqwest v0.12.28 (*)
+      │       │   │   ├── hyper-util v0.1.21
+      │       │   │   │   ├── hyper-tls v0.6.0 (*)
+      │       │   │   │   └── reqwest v0.12.28 (*)
+      │       │   │   └── reqwest v0.12.28 (*)
+      │       │   └── reqwest v0.12.28 (*)
+      │       ├── hyper v1.12.0 (*)
+      │       ├── hyper-tls v0.6.0 (*)
+      │       ├── hyper-util v0.1.21 (*)
+      │       ├── reqwest v0.12.28 (*)
+      │       ├── tokio-native-tls v0.3.1
+      │       │   ├── hyper-tls v0.6.0 (*)
+      │       │   └── reqwest v0.12.28 (*)
+      │       ├── tokio-stream v0.1.19
+      │       │   └── tokio-test v0.4.6
+      │       │       ├── (dev) arkhe-ai-core v0.1.0 (*)
+      │       │       ├── (dev) arkhe-ai-verify v0.1.0 (*)
+      │       │       ├── (dev) arkhe-code-review-agents v0.1.0 (*)
+      │       │       ├── (dev) arkhe-code-review-core v0.1.0 (*)
+      │       │       ├── (dev) arkhe-code-review-static v0.1.0 (*)
+      │       │       └── (dev) arkhe-gemma v0.1.0 (*)
+      │       ├── tokio-test v0.4.6 (*)
+      │       ├── tokio-util v0.7.20
+      │       │   └── h2 v0.4.20 (*)
+      │       ├── tower v0.5.3
+      │       │   ├── reqwest v0.12.28 (*)
+      │       │   └── tower-http v0.6.11 (*)
+      │       └── wasm-bindgen-futures v0.4.79
+      │           └── reqwest v0.12.28 (*)
+      ├── wasm-bindgen-macro-support v0.2.129
+      │   └── wasm-bindgen-macro v0.2.129
+      │       └── wasm-bindgen v0.2.129
+      │           ├── js-sys v0.3.106
+      │           │   ├── reqwest v0.12.28 (*)
+      │           │   ├── wasm-bindgen-futures v0.4.79 (*)
+      │           │   └── web-sys v0.3.106
+      │           │       └── reqwest v0.12.28 (*)
+      │           ├── reqwest v0.12.28 (*)
+      │           ├── wasm-bindgen-futures v0.4.79 (*)
+      │           └── web-sys v0.3.106 (*)
+      ├── yoke-derive v0.8.4 (*)
+      ├── zerofrom-derive v0.1.8 (*)
+      └── zerovec-derive v0.11.6
+          └── zerovec v0.11.8 (*)
+
+advisories ok, bans ok, licenses FAILED, sources ok
+Vetting Succeeded (182 exempted)
