@@ -49,6 +49,52 @@ impl TryFrom<&str> for ArtifactId {
     }
 }
 
+
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
+pub struct OperationId(Vec<u8>);
+
+impl OperationId {
+    pub const MAX_LENGTH: usize = 256;
+
+    pub fn as_bytes(&self) -> &[u8] { &self.0 }
+}
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum OperationError {
+    EmptyId,
+    IdTooLong { len: usize, max: usize },
+}
+
+impl fmt::Display for OperationError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::EmptyId => write!(f, "operation id must not be empty"),
+            Self::IdTooLong { len, max } => write!(f, "operation id length {len} exceeds max {max}"),
+        }
+    }
+}
+impl std::error::Error for OperationError {}
+
+impl TryFrom<Vec<u8>> for OperationId {
+    type Error = OperationError;
+    fn try_from(value: Vec<u8>) -> Result<Self, Self::Error> {
+        if value.is_empty() {
+            return Err(OperationError::EmptyId);
+        }
+        if value.len() > Self::MAX_LENGTH {
+            return Err(OperationError::IdTooLong { len: value.len(), max: Self::MAX_LENGTH });
+        }
+        Ok(Self(value))
+    }
+}
+
+impl TryFrom<&str> for OperationId {
+    type Error = OperationError;
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        Self::try_from(value.as_bytes().to_vec())
+    }
+}
+
 #[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct RecordId(Vec<u8>);
 
