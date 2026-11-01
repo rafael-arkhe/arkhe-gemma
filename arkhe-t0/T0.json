@@ -1,0 +1,179 @@
+{
+  "schema_version": "arkhe-t0-v1",
+  "t0_date": "2026-10-31T00:00:00Z",
+  "scope": {
+    "normative": [
+      "specs/",
+      "criteria/",
+      "method/"
+    ],
+    "descriptive": [
+      "CHANGELOG.md",
+      "golden_vectors/",
+      "README.md",
+      "non-claims.md",
+      "verify_t0.sh"
+    ],
+    "excluded": [
+      "implementations/",
+      "executions/"
+    ]
+  },
+  "hash_algorithm": "sha256-hex-lowercase",
+  "artifacts": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "457ab9fa2bfd1e7a078c663a1797157409bbb66f4c1c337dd5e97aae056f7a1e",
+      "tau": "LEMMA",
+      "normative": false,
+      "note": "pré-registo"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5541972a67964d7d40f1ad8b5471112a2a8d870e93500d95fc8e28cdb0b8283f",
+      "tau": "LEMMA",
+      "normative": false,
+      "note": "pré-registo"
+    },
+    {
+      "path": "criteria/inv-bb.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "criteria/l13.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "criteria/meta-verify.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "golden_vectors/manifest.json",
+      "sha256": "e9627863541f487648a8fcee5bf57f3b0517cf6d50b8c7f96671a28f5de6fc33",
+      "tau": "LEMMA",
+      "normative": false,
+      "note": "pré-registo"
+    },
+    {
+      "path": "method/falsifier-discipline.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "LEMMA",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "method/t0-discipline.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "LEMMA",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "method/tau.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "LEMMA",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "non-claims.md",
+      "sha256": "41d5e8b221101f308d62a0dc6e8130d8610cb92602f0a7ce910b80c219d960f1",
+      "tau": "LEMMA",
+      "normative": false,
+      "note": "pré-registo"
+    },
+    {
+      "path": "specs/AKG-L13-0001-v0.3.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "specs/AKG-META-0001-v0.2.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "specs/AKG-META-0002-v0.2.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "specs/arkhe-b-order-spec-v0.2.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "specs/arkhe-b-test-suite-v0.2.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "specs/inv-bb-28.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tau": "PENDING",
+      "normative": true,
+      "note": "pré-registo"
+    },
+    {
+      "path": "verify_t0.sh",
+      "sha256": "16a549cae41e545e0dae72b8dc37e1ac39ff038da2b642fa7f0aa72fb322a896",
+      "tau": "LEMMA",
+      "normative": false,
+      "note": "pré-registo"
+    }
+  ],
+  "claims": [
+    {
+      "id": "T0-C-001",
+      "text": "IntentBinding exige serialização canónica e comparação campo a campo; digest isolado é insuficiente.",
+      "tau": "LEMMA",
+      "evidence": "specs/AKG-META-0001-v0.2.md §2; Arkhe-B Order Spec §5",
+      "falsifier": "alterar amount_cents e recalcular o digest; o gate deve rejeitar"
+    },
+    {
+      "id": "T0-C-002",
+      "text": "Canonicalidade total de Ed25519 exige cinco verificações (S, A, R, small-order, cofactorless).",
+      "tau": "LEMMA",
+      "evidence": "RFC 8032; specs/arkhe-b-order-spec-v0.2.md §5",
+      "falsifier": "small_order_A_rejected; torsion_component_R_rejected"
+    }
+  ],
+  "non_claims": [
+    "T0 não afirma que o Arkhe está implementado.",
+    "T0 não afirma prioridade sobre a ideia de 'verificação de execução de IA'.",
+    "T0 não afirma que os 28 INV-BB cobrem todas as classes de falha.",
+    "T0 não afirma que os falsificadores foram executados."
+  ],
+  "provenance": {
+    "changelog": "CHANGELOG.md",
+    "refuted_versions_included": true
+  },
+  "signatures": {
+    "git_commit": "<hash>",
+    "sigstore_bundle": "T0.json.bundle"
+  },
+  "amendment_policy": {
+    "t0_immutable": true,
+    "new_t0_requires": "T1 com novo T0.json e nova assinatura",
+    "old_t0_stays_public": true
+  }
+}
