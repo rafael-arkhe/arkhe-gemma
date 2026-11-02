@@ -1,0 +1,5 @@
+{
+  "description": "Golden vector for malformed fraud proofs and altered bundle payloads under invariant I-05",
+  "bundle_version": "v1.0",
+  "corrupted_byte_offset": 12
+}

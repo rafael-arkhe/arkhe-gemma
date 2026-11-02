@@ -1,0 +1,15 @@
+# Rollback Policy Configuration
+# Invariant I-T05: rollback => evidência existente intacta
+
+[scope]
+allow_code_rollback = true
+allow_config_rollback = true
+allow_state_truncation = false
+allow_mmr_rewrite = false
+allow_receipt_deletion = false
+allow_checkpoint_deletion = false
+
+[migration]
+schema_strategy = "append_only"
+fallback_action = "preserve_or_halt"
+max_rollback_time_minutes = 10

@@ -1,0 +1,8 @@
+{
+  "testnet_smoke": "PASSED",
+  "canary_success_rate": 1.0,
+  "threshold": 0.995,
+  "mmr_divergence_observed": 0,
+  "invalid_receipts_accepted": 0,
+  "corrupted_chunks_accepted": 0
+}
