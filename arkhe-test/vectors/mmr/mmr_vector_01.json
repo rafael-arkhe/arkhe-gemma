@@ -1,0 +1,8 @@
+{
+  "description": "Golden vector for append-only MMR operations under invariant I-04",
+  "leaf_items": [
+    "mobile-wer-entry-0001",
+    "mobile-wer-entry-0002",
+    "mobile-wer-entry-0003"
+  ]
+}

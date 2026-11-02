@@ -1,0 +1,23 @@
+# Release Strategy & Quality Gates
+# Invariants: I-T01, I-T02, I-T04
+
+[release]
+hermetic_build = true
+signed_provenance = true
+sbom_required = true
+slsa_level = 3
+
+[rollout_stages]
+canary_nodes_pct = 5
+gradual_steps_pct = [10, 25, 50, 100]
+
+[observability_thresholds]
+max_error_rate = 0.005
+max_divergence_mmr = 0
+max_invalid_receipts = 0
+max_corrupted_chunks = 0
+canary_success_rate = 0.995
+
+[auto_halt]
+halt_on_security_failure = true
+halt_on_mmr_divergence = true

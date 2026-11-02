@@ -1,0 +1,51 @@
+# Feature Flag Policy Configuration
+# Invariant I-T06: flag ∉ {signature check, hash check, MMR append-only, role separation}
+
+[flags."network.experimental_transport"]
+name = "network.experimental_transport"
+description = "Transporte alternativo experimental"
+can_control = ["Transport selection", "Buffer sizing"]
+cannot_control = ["Validação de chunk", "hash check"]
+default_enabled = false
+
+[flags."moe.receipt_tree"]
+name = "moe.receipt_tree"
+description = "Ativação de receipt tree hierárquica"
+can_control = ["Receipt aggregation layout"]
+cannot_control = ["Assinatura dos recibos", "signature check"]
+default_enabled = false
+
+[flags."audit.bundle_v2"]
+name = "audit.bundle_v2"
+description = "Formato de bundle v2"
+can_control = ["Bundle format serialization"]
+cannot_control = ["Append-only da MMR", "mmr append-only"]
+default_enabled = false
+
+[flags."cal.anchor_batching"]
+name = "cal.anchor_batching"
+description = "Freqüência de ancoragem"
+can_control = ["Anchor batch window ms"]
+cannot_control = ["Validade offline da evidência", "hash check"]
+default_enabled = false
+
+[flags."inference.zk_sampling"]
+name = "inference.zk_sampling"
+description = "Taxa de amostragem ZK"
+can_control = ["Sampling percentage"]
+cannot_control = ["Verificação mínima obrigatória", "signature check"]
+default_enabled = false
+
+[flags."mcp.action_tools"]
+name = "mcp.action_tools"
+description = "Exposição de tools de escrita"
+can_control = ["Write tool exposure"]
+cannot_control = ["Mandato assinado", "signature check"]
+default_enabled = false
+
+[flags."governance.proposals"]
+name = "governance.proposals"
+description = "Criação de propostas autônomas"
+can_control = ["Proposal drafting"]
+cannot_control = ["Canonificação humana", "human canonization"]
+default_enabled = false

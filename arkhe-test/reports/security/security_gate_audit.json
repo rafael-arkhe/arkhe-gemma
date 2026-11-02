@@ -1,0 +1,10 @@
+{
+  "gate": "fail_closed",
+  "warnings_accepted": false,
+  "rejection_on_security_failure": true,
+  "rules_checked": [
+    "I-T01: No merge without invariant tests",
+    "I-T02: Fail-closed on security failure",
+    "I-T06: Feature flags never disable verification"
+  ]
+}

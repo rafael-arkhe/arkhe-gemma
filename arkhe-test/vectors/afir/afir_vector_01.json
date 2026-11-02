@@ -1,0 +1,19 @@
+{
+  "description": "Golden vector for valid and invalid AFiR receipts under invariant I-03",
+  "worker_id": "worker-alpha",
+  "secret_token": "arkhe-ml-dsa-seed-key-1",
+  "valid_receipt": {
+    "receipt_id": "afir-rec-001",
+    "nonce": 1001,
+    "worker_id": "worker-alpha",
+    "task_digest": "457ab9fa2bfd1e7a078c663a1797157409bbb66f4c1c337dd5e97aae056f7a1e",
+    "signature": "1004bb120b60cb817a02cfc6239bc75e921d723703eb5aae7d8dca5f917235db"
+  },
+  "tampered_signature_receipt": {
+    "receipt_id": "afir-rec-001",
+    "nonce": 1001,
+    "worker_id": "worker-alpha",
+    "task_digest": "457ab9fa2bfd1e7a078c663a1797157409bbb66f4c1c337dd5e97aae056f7a1e",
+    "signature": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+  }
+}

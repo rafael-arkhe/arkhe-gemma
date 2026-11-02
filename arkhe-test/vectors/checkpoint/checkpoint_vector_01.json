@@ -1,0 +1,15 @@
+{
+  "description": "Golden vector for hardware device enclave attestation under invariant I-06",
+  "valid_checkpoint": {
+    "epoch": 42,
+    "device_id": "secure-enclave-node-889",
+    "attestation_token": "attest:hardware:enclave:verified-tee-token-v1",
+    "state_root": "a0e28f2c25608b417e2c938d229a1bcf4b655a6d32890533bfbcf1b1574a4cf0"
+  },
+  "invalid_checkpoint": {
+    "epoch": 42,
+    "device_id": "rogue-node-101",
+    "attestation_token": "software-emulated-token",
+    "state_root": "a0e28f2c25608b417e2c938d229a1bcf4b655a6d32890533bfbcf1b1574a4cf0"
+  }
+}

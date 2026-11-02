@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "arkhe-test",
     "crates/*",
     "crates/arkhe-core/fuzz"
 ]
